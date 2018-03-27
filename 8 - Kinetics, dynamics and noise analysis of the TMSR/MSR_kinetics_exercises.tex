@@ -1,0 +1,130 @@
+\documentclass[openright, 12pt, a4paper, twoside, onecolumn]{book}
+%\documentclass[openright, 11pt, a4paper, twoside]{KEthesis_phd}
+%textsize changed above! textwidth changed in the (DINA4 format DESY)-part of KEthesis_phd.cls file!!!
+%\usepackage[Lenny]{fncychapKE} %Sonny, Lenny, Glenn, Conny, Rejne, Bjarne
+\usepackage[swedish, english]{babel}
+\usepackage[dvips]{graphicx}
+\usepackage[bf, small]{caption}
+\usepackage{psfrag}
+%\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+%\usepackage{textfit}
+%\usepackage{verbatim}
+\usepackage{subfigure}
+%\usepackage{a4wide}
+%\usepackage{wrapfig}
+%\usepackage{tabls}
+\usepackage{amsmath}
+%\usepackage{times}
+%\usepackage{helvet}
+\usepackage{palatino}
+
+\usepackage{float}
+\usepackage{cite}
+\usepackage{here}
+\pagestyle{fancy} %\fancyfoot{} \fancyhead{}
+%\fancyfoot[OR,EL]{\thepage} \fancyhead[EL]{\nouppercase \leftmark}
+\fancyhead[OR]{\nouppercase \rightmark}
+
+%
+%\newcommand{\nn}{\left<\nu(\nu-1)\right>}
+
+\fancyhead{}
+\fancyhead[RE,RO]{\scriptsize Version 2017-12-13}
+
+\fancyfoot{}
+\fancyfoot[LE,LO]{\scriptsize  Exercise Problems in the MSR course, Lecture 8}
+
+% turn off indentation globally
+\setlength{\parindent}{0pt}
+
+% manual indentation
+\renewcommand*{\indent}{\hspace{20pt}}
+
+% manual vertical space
+\newcommand*{\smallspace}{\vspace{0.5cm}}
+\newcommand*{\largespace}{\vspace{1.5cm}}
+
+% colored texts
+
+\newcommand{\red}[1]{%
+    \vspace{0.5cm}%
+    {\color[rgb]{0.8,0.1,0.1}#1}%
+}
+
+\newcommand{\blu}[1]{%
+    \vspace{0.5cm}%
+    {\color[rgb]{0.00,0.00,0.98}#1}%
+}
+
+\newcommand{\blac}[1]{%
+    \vspace{0.5cm}%
+    {#1}%
+}
+
+\begin{document}
+\chapter*{Exercise Problems to Lecture 8:\\
+Kinetics, dynamics and noise analysis of the TMSR}
+
+\section*{Problem 1}
+
+\noindent
+Start with a bare homogeneous one-dimensional slab reactor MSR along the $x$-axis, with fuel velocity originally zero. 
+Assume the width of the slab reactor being $2a$, and $x \in (-a,a)$. This means that the length of the core is $H = 2a$. The length of the external loop (leading the fuel back from the outlet to the inlet) is $L$. We assume that the fuel velocity $u$ is the same in the core as in the outer loop. 
+\smallspace
+
+For the reactor with non-moving fuel, the traditional one-group diffusion equations are valid. The static equation reads as
+\begin{equation}\label{eq:3}
+D \triangle  \phi(x)+ (\nu \Sigma_f-\Sigma_a) \phi(x)=0,
+\end{equation}
+with the boundary condition that the flux is zero at the extapolated bounaries $x=\pm a$.
+
+\smallspace
+
+The material and geometrical parameters of the core are as follows:
+\begin{displaymath}
+\Sigma_a=0.01 \,\, \text{cm}^{-1};
+\end{displaymath}
+\begin{displaymath}
+D=0.33 \,\, \text{cm};
+\end{displaymath}
+\begin{displaymath}
+a=100 \,\, \text{cm} \quad (H=200 \, \, \text{cm});
+\end{displaymath}
+\begin{displaymath}
+L=400 \,\, \text{cm}.
+\end{displaymath}
+
+Start with finding the $\nu \Sigma_f$  which makes the system critical. Calculate the critical flux, for later plotting.
+
+\smallspace
+Then, assume that we set the fuel into motion with a velocity $u = \infty$, without changing any other parameter. The reactor will then become subcritical.
+\smallspace
+Solve now the following tasks.
+
+\begin{enumerate}
+\item Delayed neutrons
+\smallspace
+
+What will be the fraction of the delayed neutrons, which will decay in the core and not in the outside loop?
+
+\item Criticality
+\smallspace
+
+Calculate the multiplication factor of the subcritical reactor $k$ (or the subcritical reactivity $\rho$) of the system. 
+\smallspace
+
+For this, you will have to solve the transcendental criticality equation (5.25) of the notes to determine the critical $B_{0}$, and the subcritical form of Eq. (5.22) to find the multiplication factor.
+
+Can you see a connection between the subcriticality of the reactor, and the fraction of the delayed neutrons decaying in the core?
+
+\item Flux shape
+\smallspace
+
+Calculate  the static flux for the MSR with infinite fuel velocity, and plot it together with the static flux when the fuel velocity is zero, such that they are both normalise to unity at $x = 0$. Can you interpret the differences you see?
+
+\end{enumerate}
+
+\end{document}

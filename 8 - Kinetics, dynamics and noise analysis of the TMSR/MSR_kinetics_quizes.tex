@@ -1,0 +1,102 @@
+\documentclass[openright, 12pt, a4paper, twoside, onecolumn]{book}
+%\documentclass[openright, 11pt, a4paper, twoside]{KEthesis_phd}
+%textsize changed above! textwidth changed in the (DINA4 format DESY)-part of KEthesis_phd.cls file!!!
+%\usepackage[Lenny]{fncychapKE} %Sonny, Lenny, Glenn, Conny, Rejne, Bjarne
+\usepackage[swedish, english]{babel}
+\usepackage[dvips]{graphicx}
+\usepackage[bf, small]{caption}
+\usepackage{psfrag}
+%\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+%\usepackage{textfit}
+%\usepackage{verbatim}
+\usepackage{subfigure}
+%\usepackage{a4wide}
+%\usepackage{wrapfig}
+%\usepackage{tabls}
+\usepackage{amsmath}
+%\usepackage{times}
+%\usepackage{helvet}
+\usepackage{palatino}
+
+\usepackage{float}
+\usepackage{cite}
+\usepackage{here}
+\pagestyle{fancy} %\fancyfoot{} \fancyhead{}
+%\fancyfoot[OR,EL]{\thepage} \fancyhead[EL]{\nouppercase \leftmark}
+\fancyhead[OR]{\nouppercase \rightmark}
+
+%
+%\newcommand{\nn}{\left<\nu(\nu-1)\right>}
+
+\fancyhead{}
+\fancyhead[RE,RO]{\scriptsize Version 2017-12-13}
+
+\fancyfoot{}
+\fancyfoot[LE,LO]{\scriptsize  Exercise Problems in the MSR course, Lecture 8}
+
+% turn off indentation globally
+\setlength{\parindent}{0pt}
+
+% manual indentation
+\renewcommand*{\indent}{\hspace{20pt}}
+
+% manual vertical space
+\newcommand*{\smallspace}{\vspace{0.5cm}}
+\newcommand*{\largespace}{\vspace{1.5cm}}
+
+% colored texts
+
+\newcommand{\red}[1]{%
+    \vspace{0.5cm}%
+    {\color[rgb]{0.8,0.1,0.1}#1}%
+}
+
+\newcommand{\blu}[1]{%
+    \vspace{0.5cm}%
+    {\color[rgb]{0.00,0.00,0.98}#1}%
+}
+
+\newcommand{\blac}[1]{%
+    \vspace{0.5cm}%
+    {#1}%
+}
+
+\begin{document}
+\chapter*{Quiz questions to Lecture 8:\\
+Kinetics, dynamics and noise analysis of the TMSR}
+
+\section*{Quiz 1}
+
+In an MSR, if one starts up a system which is critical with non-moving fuel, when the fuel starts moving, the system becomes sub-critical. This is related to the movement of the delayed neutron precursors. 
+\smallspace
+
+However, the movement of the precursors influences the reactivity, or $k_{eff}$ of the system by two different mechanisms. List both of them.
+\smallspace
+
+(Answer: a) some of the precursors will decay outside the core, and the neutrons emitted will be lost; b) even those decaying inside the core, the majority will decay at a place where the neutron importance is lower than where the precursor was born).
+
+\section*{Quiz 2}
+
+Based on the above, give a qualitative assessment of how the reactivity will change with fuel velocity increasing from zero to a high value.
+\smallspace
+
+(Answer: For very low velocities, all precursors which leave the core, will decay outside the core. However, when the velocity becomes high enough, the return time from core exit to core inlet will be short enough such that some of the precursors which leave the core, will survive in the outer loop and will decay after having returned to the core. This latter effect contributes positively to the reactivity. So it may happen that the dependence of the reactivity on fuel velocity is not monotonic).  
+
+\section*{Quiz 3}
+
+Is the one-group diffusion equation for and MSR self-adjoint? If not, why?
+\smallspace
+
+(Answer: it is not self-adjoint, because the flow has a direction, and hence the equations are not invariant to time reversal). 
+
+\section*{Quiz 4}
+
+Make a qualitative assessment of the stability of an MSR. Assume that the power suddenly increasing in the core. Try to argue whether the corresponding reactivity change will be positive (unstable) or negative (stable).
+\smallspace
+
+(Answer: apart from the other factors which are also valid for tradtional reactors, and usually have negative reactivity coefficients, such as the Doppler coefficient, lower fuel density, there are even other factors for an MSR. Partly, the thermal expansion of the fuel means that part of the fuel which was previously in the core, will be "pressed out" and hence not being in the core any longer (negative reactivity effect). Partly, if the mass flow of the fuel remains the same, the fuel velocity in the core will increase, which in general leads to a decrease of reactivity. Hence, the MSR is stable for small perturbations.)
+
+\end{document}
